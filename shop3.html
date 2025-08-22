@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStyle - Premium Smartwatches & Wallets in Pakistan</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#E8F0FE',secondary:'#F5F5F5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-gradient {
+background: linear-gradient(135deg, #E8F0FE 0%, #ffffff 100%);
+}
+.smooth-scroll {
+scroll-behavior: smooth;
+}
+.cart-badge {
+animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.2); }
+}
+.product-hover {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-hover:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.loading-skeleton {
+background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+background-size: 200% 100%;
+animation: loading 1.5s infinite;
+}
+@keyframes loading {
+0% { background-position: 200% 0; }
+100% { background-position: -200% 0; }
+}
+.modal-backdrop {
+backdrop-filter: blur(4px);
+}
+.floating-whatsapp {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+z-index: 1000;
+animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+}
+.back-to-top {
+position: fixed;
+bottom: 6rem;
+right: 2rem;
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+.back-to-top.visible {
+opacity: 1;
+visibility: visible;
+}
+input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+background: transparent;
+cursor: pointer;
+}
+input[type="range"]::-webkit-slider-track {
+background: #e2e8f0;
+height: 6px;
+border-radius: 3px;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+background: #3b82f6;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+border: 2px solid white;
+box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.custom-checkbox {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 4px;
+background: white;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background: #3b82f6;
+border-color: #3b82f6;
+}
+.custom-checkbox:checked::after {
+content: '✓';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 12px;
+font-weight: bold;
+}
+.custom-radio {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 50%;
+background: white;
+cursor: pointer;
+position: relative;
+}
+.custom-radio:checked {
+border-color: #3b82f6;
+}
+.custom-radio:checked::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 8px;
+height: 8px;
+background: #3b82f6;
+border-radius: 50%;
+}
+.custom-switch {
+width: 48px;
+height: 24px;
+background: #e5e7eb;
+border-radius: 12px;
+position: relative;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+.custom-switch::after {
+content: '';
+position: absolute;
+top: 2px;
+left: 2px;
+width: 20px;
+height: 20px;
+background: white;
+border-radius: 50%;
+transition: transform 0.3s ease;
+box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.custom-switch.active {
+background: #3b82f6;
+}
+.custom-switch.active::after {
+transform: translateX(24px);
+}
+</style>
+</head>
+<body class="smooth-scroll">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo -->
+<div class="flex-shrink-0">
+<div class="font-['Pacifico'] text-2xl text-gray-900">TechStyle</div>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+<a href="#products" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Products</a>
+<a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+</nav>
+<!-- Cart -->
+<div class="flex items-center space-x-4">
+<div class="relative">
+<button id="cart-button" class="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-shopping-cart-line text-xl"></i>
+</div>
+<span class="cart-count absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+</button>
+<div id="cart-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-lg z-50 border border-gray-100">
+<div class="p-4">
+<h3 class="font-semibold text-gray-900 mb-4">Shopping Cart</h3>
+<div class="space-y-4 max-h-64 overflow-y-auto">
+<div class="flex items-center gap-4">
+<img src="https://readdy.ai/api/search-image?query=Premium%20black%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=80&height=80&seq=cart001&orientation=squarish" alt="Premium Smartwatch Pro" class="w-16 h-16 object-cover rounded-lg">
+<div class="flex-1">
+<h4 class="text-sm font-medium text-gray-900">Premium Smartwatch Pro</h4>
+<p class="text-sm text-gray-600">PKR 15,999</p>
+<div class="flex items-center gap-2 mt-1">
+<button class="quantity-btn text-gray-500 hover:text-blue-600" data-action="decrease">-</button>
+<span class="text-sm">1</span>
+<button class="quantity-btn text-gray-500 hover:text-blue-600" data-action="increase">+</button>
+</div>
+</div>
+<button class="text-gray-400 hover:text-red-500">
+<i class="ri-delete-bin-line"></i>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<img src="https://readdy.ai/api/search-image?query=Luxury%20brown%20leather%20wallet%20with%20multiple%20card%20slots%20on%20clean%20white%20background%2C%20premium%20craftsmanship%20with%20elegant%20stitching%20details%2C%20professional%20product%20photography&width=80&height=80&seq=cart002&orientation=squarish" alt="Executive Leather Wallet" class="w-16 h-16 object-cover rounded-lg">
+<div class="flex-1">
+<h4 class="text-sm font-medium text-gray-900">Executive Leather Wallet</h4>
+<p class="text-sm text-gray-600">PKR 3,499</p>
+<div class="flex items-center gap-2 mt-1">
+<button class="quantity-btn text-gray-500 hover:text-blue-600" data-action="decrease">-</button>
+<span class="text-sm">1</span>
+<button class="quantity-btn text-gray-500 hover:text-blue-600" data-action="increase">+</button>
+</div>
+</div>
+<button class="text-gray-400 hover:text-red-500">
+<i class="ri-delete-bin-line"></i>
+</button>
+</div>
+</div>
+<div class="border-t border-gray-100 mt-4 pt-4">
+<div class="flex justify-between text-sm mb-2">
+<span class="text-gray-600">Subtotal</span>
+<span class="font-medium text-gray-900">PKR 19,498</span>
+</div>
+<div class="flex justify-between text-sm mb-4">
+<span class="text-gray-600">Shipping</span>
+<span class="font-medium text-gray-900">PKR 500</span>
+</div>
+<div class="flex justify-between font-semibold mb-4">
+<span>Total</span>
+<span>PKR 19,998</span>
+</div>
+<div class="space-y-2">
+<a id="contact"><button class="w-full bg-blue-600 text-white py-2 !rounded-button font-medium hover:bg-blue-700 transition-colors whitespace-nowrap">Checkout</button></a>
+
+<button class="w-full border border-gray-300 text-gray-700 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">View Cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile menu button -->
+<button class="md:hidden p-2 text-gray-700" id="mobile-menu-btn">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+<a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+<a href="#products" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium">Products</a>
+<a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="text-center lg:text-left">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+Premium Tech
+<span class="text-blue-600">Accessories</span>
+for Modern Life
+</h1>
+<p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+Discover our curated collection of smartwatches and premium wallets. Quality craftsmanship meets cutting-edge technology.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="bg-blue-600 text-white px-8 py-4 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+Shop Now
+</button>
+<button class="border-2 border-blue-600 text-blue-600 px-8 py-4 !rounded-button font-semibold hover:bg-blue-600 hover:text-white transition-colors whitespace-nowrap">
+View Collection
+</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden">
+<img
+src="https://readdy.ai/api/search-image?query=Premium%20smartwatch%20and%20luxury%20leather%20wallet%20displayed%20on%20modern%20minimalist%20white%20background%20with%20soft%20lighting%20and%20elegant%20shadows%2C%20product%20photography%20style%2C%20clean%20composition%20with%20subtle%20blue%20accent%20lighting%2C%20high-end%20tech%20accessories%20showcase&width=600&height=600&seq=hero001&orientation=squarish"
+alt="Premium Tech Accessories"
+class="w-full h-full object-cover object-center"
+>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary transition-colors">
+<div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-blue-100 rounded-full">
+<i class="ri-arrow-go-back-line text-blue-600 text-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Free Returns</h3>
+<p class="text-sm text-gray-600">30-day hassle-free returns on all products</p>
+</div>
+<div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary transition-colors">
+<div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-green-100 rounded-full">
+<i class="ri-hand-coin-line text-green-600 text-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Cash on Delivery</h3>
+<p class="text-sm text-gray-600">Pay when you receive your order</p>
+</div>
+<div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary transition-colors">
+<div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-purple-100 rounded-full">
+<i class="ri-customer-service-2-line text-purple-600 text-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">24/7 Support</h3>
+<p class="text-sm text-gray-600">Local customer support team</p>
+</div>
+<div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary transition-colors">
+<div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-orange-100 rounded-full">
+<i class="ri-shield-check-line text-orange-600 text-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Secure Payment</h3>
+<p class="text-sm text-gray-600">Multiple secure payment options</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section id="products" class="py-16 bg-secondary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
+<p class="text-xl text-gray-600 max-w-2xl mx-auto">Discover our handpicked selection of premium smartwatches and luxury wallets</p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="product-hover bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer" data-product="1">
+<div class="aspect-square overflow-hidden">
+<img
+src="https://readdy.ai/api/search-image?query=Premium%20black%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=400&height=400&seq=product001&orientation=squarish"
+alt="Premium Smartwatch Pro"
+class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-gray-900 mb-2">Premium Smartwatch Pro</h3>
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-blue-600">PKR 15,999</span>
+<button class="text-sm text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-hover bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer" data-product="2">
+<div class="aspect-square overflow-hidden">
+<img
+src="https://readdy.ai/api/search-image?query=Luxury%20brown%20leather%20wallet%20with%20multiple%20card%20slots%20on%20clean%20white%20background%2C%20premium%20craftsmanship%20with%20elegant%20stitching%20details%2C%20professional%20product%20photography&width=400&height=400&seq=product002&orientation=squarish"
+alt="Executive Leather Wallet"
+class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-gray-900 mb-2">Executive Leather Wallet</h3>
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-blue-600">PKR 3,499</span>
+<button class="text-sm text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-hover bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer" data-product="3">
+<div class="aspect-square overflow-hidden">
+<img
+src="https://readdy.ai/api/search-image?query=Silver%20smartwatch%20with%20sport%20band%20on%20clean%20white%20background%2C%20fitness%20tracking%20device%20with%20colorful%20display%2C%20modern%20tech%20accessory%20photography&width=400&height=400&seq=product003&orientation=squarish"
+alt="Sport Fitness Tracker"
+class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-gray-900 mb-2">Sport Fitness Tracker</h3>
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-blue-600">PKR 8,999</span>
+<button class="text-sm text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-hover bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer" data-product="4">
+<div class="aspect-square overflow-hidden">
+<img
+src="https://readdy.ai/api/search-image?query=Minimalist%20black%20leather%20wallet%20with%20RFID%20protection%20on%20clean%20white%20background%2C%20slim%20design%20with%20modern%20features%2C%20premium%20product%20photography&width=400&height=400&seq=product004&orientation=squarish"
+alt="RFID Slim Wallet"
+class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-gray-900 mb-2">RFID Slim Wallet</h3>
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-blue-600">PKR 2,799</span>
+<button class="text-sm text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Modal -->
+<div id="delete-confirmation-modal" class="fixed inset-0 bg-black bg-opacity-50 modal-backdrop z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-xl max-w-sm w-full p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Remove Item</h3>
+<p class="text-gray-600 mb-6">Are you sure you want to remove this item from your cart?</p>
+<div class="flex space-x-4">
+<button id="confirm-delete" class="flex-1 bg-red-600 text-white py-2 !rounded-button font-medium hover:bg-red-700 transition-colors whitespace-nowrap">Confirm Delete</button>
+<button id="cancel-delete" class="flex-1 border border-gray-300 text-gray-700 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Cancel</button>
+</div>
+</div>
+</div>
+<div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 modal-backdrop z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-bold text-gray-900" id="modal-title">Product Details</h2>
+<button id="close-modal" class="p-2 hover:bg-gray-100 rounded-full">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</div>
+</button>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div>
+<div class="aspect-square rounded-xl overflow-hidden mb-4">
+<img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+</div>
+<div class="flex space-x-2">
+<div class="w-16 h-16 rounded-lg overflow-hidden border-2 border-blue-600">
+<img id="modal-thumb1" src="" alt="" class="w-full h-full object-cover">
+</div>
+<div class="w-16 h-16 rounded-lg overflow-hidden border border-gray-200">
+<img id="modal-thumb2" src="" alt="" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-sm text-gray-600">(124 reviews)</span>
+</div>
+<div class="mb-6">
+<span class="text-3xl font-bold text-blue-600" id="modal-price">PKR 15,999</span>
+<span class="text-lg text-gray-500 line-through ml-2">PKR 19,999</span>
+<span class="text-sm text-green-600 ml-2 bg-green-100 px-2 py-1 rounded">20% OFF</span>
+</div>
+<p class="text-gray-600 mb-6" id="modal-description">
+Premium quality smartwatch with advanced health monitoring features, GPS tracking, and 7-day battery life. Perfect for fitness enthusiasts and professionals.
+</p>
+<div class="mb-6">
+<h4 class="font-semibold text-gray-900 mb-3">Color Options</h4>
+<div class="flex space-x-3" id="color-options">
+<button class="w-8 h-8 rounded-full bg-black border-2 border-blue-600 color-option" data-color="black"></button>
+<button class="w-8 h-8 rounded-full bg-gray-400 border-2 border-gray-300 color-option" data-color="gray"></button>
+<button class="w-8 h-8 rounded-full bg-blue-600 border-2 border-gray-300 color-option" data-color="blue"></button>
+</div>
+</div>
+<div class="flex space-x-4">
+<button class="flex-1 bg-blue-600 text-white py-3 px-6 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+Add to Cart
+</button>
+<button class="border-2 border-gray-300 text-gray-700 py-3 px-6 !rounded-button font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors whitespace-nowrap">
+Back to Products
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Customer Reviews -->
+<section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+<p class="text-xl text-gray-600">Real reviews from satisfied customers across Pakistan</p>
+</div>
+<div class="relative">
+<div class="overflow-hidden">
+<div class="flex transition-transform duration-300 ease-in-out" id="reviews-slider">
+<div class="min-w-full grid md:grid-cols-3 gap-6">
+<div class="bg-gray-50 p-6 rounded-xl">
+<div class="flex items-center mb-4">
+<img
+src="https://readdy.ai/api/search-image?query=Professional%20Pakistani%20businessman%20headshot%20photo%2C%20confident%20smile%2C%20business%20attire%2C%20clean%20background%20for%20customer%20testimonial&width=60&height=60&seq=review001&orientation=squarish"
+alt="Ahmed Hassan"
+class="w-12 h-12 rounded-full object-cover mr-4"
+>
+<div>
+<h4 class="font-semibold text-gray-900">Ahmed Hassan</h4>
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Excellent quality smartwatch! The battery life is amazing and the fitness tracking features are very accurate. Highly recommended!"</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl">
+<div class="flex items-center mb-4">
+<img
+src="https://readdy.ai/api/search-image?query=Young%20Pakistani%20woman%20professional%20headshot%2C%20friendly%20expression%2C%20modern%20style%2C%20clean%20background%20for%20customer%20review&width=60&height=60&seq=review002&orientation=squarish"
+alt="Fatima Khan"
+class="w-12 h-12 rounded-full object-cover mr-4"
+>
+<div>
+<h4 class="font-semibold text-gray-900">Fatima Khan</h4>
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Beautiful leather wallet with perfect stitching. The RFID protection gives me peace of mind. Great value for money!"</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl">
+<div class="flex items-center mb-4">
+<img
+src="https://readdy.ai/api/search-image?query=Pakistani%20male%20student%20headshot%20photo%2C%20casual%20attire%2C%20youthful%20appearance%2C%20clean%20background%20for%20testimonial&width=60&height=60&seq=review003&orientation=squarish"
+alt="Ali Raza"
+class="w-12 h-12 rounded-full object-cover mr-4"
+>
+<div>
+<h4 class="font-semibold text-gray-900">Ali Raza</h4>
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Fast delivery and excellent customer service. The product quality exceeded my expectations. Will definitely order again!"</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8 space-x-2">
+<button class="w-3 h-3 rounded-full bg-blue-600 review-dot active" data-slide="0"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 review-dot" data-slide="1"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 review-dot" data-slide="2"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-16 bg-secondary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Follow Us on Instagram</h2>
+<p class="text-xl text-gray-600">Tag @techstyle_pk to be featured</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Instagram%20style%20photo%20of%20smartwatch%20on%20wrist%20during%20workout%2C%20fitness%20lifestyle%2C%20natural%20lighting%2C%20social%20media%20aesthetic&width=300&height=300&seq=insta001&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Lifestyle%20photo%20of%20leather%20wallet%20with%20coffee%20and%20notebook%20on%20wooden%20table%2C%20Instagram%20aesthetic%2C%20warm%20lighting&width=300&height=300&seq=insta002&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Flat%20lay%20of%20smartwatch%20accessories%20and%20charging%20cable%20on%20marble%20surface%2C%20minimalist%20Instagram%20style%20photography&width=300&height=300&seq=insta003&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Customer%20unboxing%20experience%20of%20premium%20wallet%20packaging%2C%20Instagram%20story%20style%2C%20hands%20opening%20elegant%20box&width=300&height=300&seq=insta004&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Smartwatch%20displaying%20fitness%20stats%20after%20morning%20run%2C%20outdoor%20lifestyle%20photography%2C%20Instagram%20post%20style&width=300&height=300&seq=insta005&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden relative group cursor-pointer">
+<img
+src="https://readdy.ai/api/search-image?query=Collection%20of%20different%20colored%20leather%20wallets%20arranged%20aesthetically%2C%20Instagram%20flat%20lay%20style%2C%20natural%20lighting&width=300&height=300&seq=insta006&orientation=squarish"
+alt="Instagram Post"
+class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+>
+<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+<div class="w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<i class="ri-heart-line text-white text-xl like-btn cursor-pointer hover:scale-110 transition-transform"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section id="contact" class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+<p class="text-xl text-gray-600">Have questions? We'd love to hear from you</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<div>
+<form class="space-y-6" id="contact-form">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+<input
+type="text"
+class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm"
+placeholder="Enter your full name"
+required
+>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input
+type="email"
+class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm"
+placeholder="Enter your email address"
+required
+>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea
+rows="5"
+class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm resize-none"
+placeholder="Tell us how we can help you..."
+required
+></textarea>
+</div>
+<button
+type="submit"
+class="w-full bg-blue-600 text-white py-3 px-6 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
+id="submit-btn"
+>
+Send Message
+</button>
+</form>
+</div>
+<div>
+<div class="aspect-video rounded-xl overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-map-pin-line text-blue-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Address</h4>
+<p class="text-gray-600">Main Market, Gulberg III, Lahore, Pakistan</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-phone-line text-blue-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Phone</h4>
+<p class="text-gray-600">+92 300 1234567</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-mail-line text-blue-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Email</h4>
+<p class="text-gray-600">hello@techstyle.pk</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<div class="font-['Pacifico'] text-2xl mb-4">TechStyle</div>
+<p class="text-gray-400 mb-4">Premium tech accessories for modern lifestyle. Quality you can trust.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition-colors">
+<i class="ri-twitter-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Products</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Customer Service</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">Shipping Info</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Size Guide</a></li>
+<li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Payment Methods</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded">
+<i class="ri-hand-coin-line text-green-400"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded">
+<i class="ri-bank-card-line text-blue-400"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded">
+<i class="ri-smartphone-line text-purple-400"></i>
+</div>
+</div>
+<p class="text-sm text-gray-400">COD • JazzCash • EasyPaisa</p>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2024 TechStyle. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/923001234567" class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-whatsapp-line text-xl"></i>
+</div>
+</a>
+<!-- Back to Top -->
+<button class="back-to-top bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors" id="back-to-top">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-up-line text-xl"></i>
+</div>
+</button>
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-40">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm mb-4 sm:mb-0">We use cookies to enhance your browsing experience and provide personalized content.</p>
+<div class="flex space-x-4">
+<button id="accept-cookies" class="bg-blue-600 text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-blue-700 transition-colors whitespace-nowrap">
+Accept All
+</button>
+<button id="decline-cookies" class="border border-gray-600 text-gray-300 px-4 py-2 !rounded-button text-sm font-medium hover:bg-gray-800 transition-colors whitespace-nowrap">
+Decline
+</button>
+</div>
+</div>
+</div>
+<script id="mobile-menu-toggle">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+</script>
+<script id="product-modal-handler">
+document.addEventListener('DOMContentLoaded', function() {
+const productCards = document.querySelectorAll('[data-product]');
+const modal = document.getElementById('product-modal');
+const closeModal = document.getElementById('close-modal');
+const products = {
+'1': {
+title: 'Premium Smartwatch Pro',
+price: 'PKR 15,999',
+image: 'https://readdy.ai/api/search-image?query=Premium%20black%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=600&height=600&seq=modal001&orientation=squarish',
+description: 'Advanced smartwatch with health monitoring, GPS tracking, and 7-day battery life. Features include heart rate monitoring, sleep tracking, and waterproof design.',
+variants: {
+black: 'https://readdy.ai/api/search-image?query=Premium%20black%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=600&height=600&seq=modal001&orientation=squarish',
+gray: 'https://readdy.ai/api/search-image?query=Premium%20silver%20gray%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=600&height=600&seq=modal001gray&orientation=squarish',
+blue: 'https://readdy.ai/api/search-image?query=Premium%20blue%20smartwatch%20with%20metal%20band%20on%20clean%20white%20background%2C%20modern%20design%20with%20digital%20display%2C%20professional%20product%20photography%20with%20soft%20shadows%20and%20minimal%20styling&width=600&height=600&seq=modal001blue&orientation=squarish'
+}
+},
+'2': {
+title: 'Executive Leather Wallet',
+price: 'PKR 3,499',
+image: 'https://readdy.ai/api/search-image?query=Luxury%20brown%20leather%20wallet%20with%20multiple%20card%20slots%20on%20clean%20white%20background%2C%20premium%20craftsmanship%20with%20elegant%20stitching%20details%2C%20professional%20product%20photography&width=600&height=600&seq=modal002&orientation=squarish',
+description: 'Premium genuine leather wallet with RFID protection. Features multiple card slots, bill compartments, and elegant stitching for durability.'
+},
+'3': {
+title: 'Sport Fitness Tracker',
+price: 'PKR 8,999',
+image: 'https://readdy.ai/api/search-image?query=Silver%20smartwatch%20with%20sport%20band%20on%20clean%20white%20background%2C%20fitness%20tracking%20device%20with%20colorful%20display%2C%20modern%20tech%20accessory%20photography&width=600&height=600&seq=modal003&orientation=squarish',
+description: 'Lightweight fitness tracker perfect for active lifestyle. Includes step counting, calorie tracking, and multiple sport modes.'
+},
+'4': {
+title: 'RFID Slim Wallet',
+price: 'PKR 2,799',
+image: 'https://readdy.ai/api/search-image?query=Minimalist%20black%20leather%20wallet%20with%20RFID%20protection%20on%20clean%20white%20background%2C%20slim%20design%20with%20modern%20features%2C%20premium%20product%20photography&width=600&height=600&seq=modal004&orientation=squarish',
+description: 'Ultra-slim wallet with RFID blocking technology. Minimalist design with essential card storage and premium materials.'
+}
+};
+productCards.forEach(card => {
+card.addEventListener('click', function() {
+const productId = this.getAttribute('data-product');
+const product = products[productId];
+document.getElementById('modal-title').textContent = product.title;
+document.getElementById('modal-price').textContent = product.price;
+document.getElementById('modal-image').src = product.image;
+document.getElementById('modal-thumb1').src = product.image;
+document.getElementById('modal-thumb2').src = product.image;
+document.getElementById('modal-description').textContent = product.description;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+const colorOptions = document.getElementById('color-options');
+if (colorOptions) {
+const buttons = colorOptions.querySelectorAll('.color-option');
+buttons.forEach(button => {
+button.addEventListener('click', function() {
+buttons.forEach(btn => btn.classList.replace('border-blue-600', 'border-gray-300'));
+this.classList.replace('border-gray-300', 'border-blue-600');
+const color = this.getAttribute('data-color');
+if (product.variants && product.variants[color]) {
+document.getElementById('modal-image').src = product.variants[color];
+document.getElementById('modal-thumb1').src = product.variants[color];
+document.getElementById('modal-thumb2').src = product.variants[color];
+}
+});
+});
+}
+});
+});
+closeModal.addEventListener('click', function() {
+modal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+});
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+modal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+});
+});
+</script>
+<script id="reviews-slider">
+document.addEventListener('DOMContentLoaded', function() {
+const slider = document.getElementById('reviews-slider');
+const dots = document.querySelectorAll('.review-dot');
+let currentSlide = 0;
+function updateSlider() {
+slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+dots.forEach((dot, index) => {
+dot.classList.toggle('bg-blue-600', index === currentSlide);
+dot.classList.toggle('bg-gray-300', index !== currentSlide);
+dot.classList.toggle('active', index === currentSlide);
+});
+}
+dots.forEach((dot, index) => {
+dot.addEventListener('click', function() {
+currentSlide = index;
+updateSlider();
+});
+});
+setInterval(() => {
+currentSlide = (currentSlide + 1) % 3;
+updateSlider();
+}, 5000);
+});
+</script>
+<script id="contact-form-handler">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+submitBtn.innerHTML = '<div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline-block"></div>Sending...';
+submitBtn.disabled = true;
+setTimeout(() => {
+submitBtn.innerHTML = 'Message Sent!';
+submitBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+submitBtn.classList.add('bg-green-600');
+setTimeout(() => {
+submitBtn.innerHTML = 'Send Message';
+submitBtn.classList.remove('bg-green-600');
+submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+submitBtn.disabled = false;
+form.reset();
+}, 2000);
+}, 1500);
+});
+});
+</script>
+<script id="scroll-effects">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTop.classList.add('visible');
+} else {
+backToTop.classList.remove('visible');
+}
+});
+backToTop.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+const likeBtns = document.querySelectorAll('.like-btn');
+likeBtns.forEach(btn => {
+let isLiked = false;
+btn.addEventListener('click', function(e) {
+e.stopPropagation();
+isLiked = !isLiked;
+if (isLiked) {
+this.classList.remove('ri-heart-line');
+this.classList.add('ri-heart-fill');
+this.classList.add('text-red-500');
+this.classList.remove('text-white');
+} else {
+this.classList.add('ri-heart-line');
+this.classList.remove('ri-heart-fill');
+this.classList.remove('text-red-500');
+this.classList.add('text-white');
+}
+});
+});
+});
+</script>
+<script id="cookie-banner-handler">
+document.addEventListener('DOMContentLoaded', function() {
+const cookieBanner = document.getElementById('cookie-banner');
+const acceptBtn = document.getElementById('accept-cookies');
+const declineBtn = document.getElementById('decline-cookies');
+if (!localStorage.getItem('cookiesAccepted')) {
+setTimeout(() => {
+cookieBanner.style.display = 'block';
+}, 2000);
+}
+acceptBtn.addEventListener('click', function() {
+localStorage.setItem('cookiesAccepted', 'true');
+cookieBanner.style.display = 'none';
+});
+declineBtn.addEventListener('click', function() {
+localStorage.setItem('cookiesAccepted', 'false');
+cookieBanner.style.display = 'none';
+});
+});
+</script>
+<script id="cart-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+let cartCount = 2;
+const cartBadge = document.querySelector('.cart-count');
+const cartButton = document.getElementById('cart-button');
+const cartDropdown = document.getElementById('cart-dropdown');
+const quantityBtns = document.querySelectorAll('.quantity-btn');
+const deleteConfirmationModal = document.getElementById('delete-confirmation-modal');
+const confirmDeleteBtn = document.getElementById('confirm-delete');
+const cancelDeleteBtn = document.getElementById('cancel-delete');
+let itemToDelete = null;
+function updateCartCount() {
+cartBadge.textContent = cartCount;
+cartBadge.classList.add('cart-badge');
+setTimeout(() => {
+cartBadge.classList.remove('cart-badge');
+}, 500);
+}
+cartButton.addEventListener('click', function(e) {
+e.stopPropagation();
+cartDropdown.classList.toggle('hidden');
+});
+document.addEventListener('click', function(e) {
+if (!cartDropdown.contains(e.target) && !cartButton.contains(e.target)) {
+cartDropdown.classList.add('hidden');
+}
+});
+document.addEventListener('click', function(e) {
+if (e.target.textContent.includes('Add to Cart')) {
+cartCount++;
+updateCartCount();
+}
+});
+quantityBtns.forEach(btn => {
+btn.addEventListener('click', function() {
+const action = this.dataset.action;
+const quantitySpan = this.parentElement.querySelector('span');
+let quantity = parseInt(quantitySpan.textContent);
+if (action === 'increase') {
+quantity++;
+cartCount++;
+} else if (action === 'decrease' && quantity > 1) {
+quantity--;
+cartCount--;
+}
+quantitySpan.textContent = quantity;
+updateCartCount();
+});
+});
+document.querySelectorAll('.text-gray-400.hover\\:text-red-500').forEach(deleteBtn => {
+deleteBtn.addEventListener('click', function(e) {
+e.stopPropagation();
+itemToDelete = this.closest('.flex.items-center.gap-4');
+deleteConfirmationModal.classList.remove('hidden');
+});
+});
+confirmDeleteBtn.addEventListener('click', function() {
+if (itemToDelete) {
+cartCount--;
+updateCartCount();
+itemToDelete.remove();
+itemToDelete = null;
+}
+deleteConfirmationModal.classList.add('hidden');
+});
+cancelDeleteBtn.addEventListener('click', function() {
+deleteConfirmationModal.classList.add('hidden');
+itemToDelete = null;
+});
+deleteConfirmationModal.addEventListener('click', function(e) {
+if (e.target === deleteConfirmationModal) {
+deleteConfirmationModal.classList.add('hidden');
+itemToDelete = null;
+}
+});
+});
+</script>
+</body>
+</html>
